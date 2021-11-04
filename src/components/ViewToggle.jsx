@@ -13,6 +13,15 @@ const ViewToggle = ({ handleViewToggle, showDone }) => {
       >
         To Do
       </Button>
+      <Button
+        className={
+          "nav-link btn btn-" + (showDone ? "primary" : "outline-secondary")
+        }
+        onClick={() => handleViewToggle(true)}
+        disabled={showDone}
+      >
+        Done
+      </Button>
     </div>
   );
 };

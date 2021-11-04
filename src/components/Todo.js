@@ -9,10 +9,10 @@ const Todo = ({ todo, handleDone, handleRemoveTodo }) => {
         id={"done" + todo.id}
         className="mr-4"
         onChange={() => handleDone(todo)}
-        defaultChecked={todo.done}
+        defaultChecked={todo.is_completed}
       />
-      <label htmlFor={"done" + todo.id}>
-        {todo.name}
+      <label for={"done" + todo.id}>
+        {todo.is_completed ? <s>{todo.name}</s> : todo.name}
       </label>
       <Button
         className="btn btn-danger ml-auto"
